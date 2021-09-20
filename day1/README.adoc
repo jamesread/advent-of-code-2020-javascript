@@ -1,0 +1,14 @@
+Problem statement: iterate a list of integers, find the 2/3 integers in the
+list that sum to 2020. Multiply those integers to get the result.
+
+Approach: I can only think of one way to find the solution - which is to add
+numbers together, check if the result is 2020, and then if so, print the result
+of multiplying those numbers instead. 
+
+While it's most likely possible to reduce the search space of possible numbers
+(eg, 1200 + 1300 will always > 2000), so ignore that combination, the search
+space is small enough that a brute force, naive solution works; try adding all 
+numbers to each other. In Part 2 of the puzzle (3 integers that add to 2020),
+the search space is still only 200 numbers, so even with a **grotesque** O(3)
+efficiency in worse case, this still returns in < 15 seconds (or 1 second if
+you disable debug output - as most most of that time is formatting console output).
